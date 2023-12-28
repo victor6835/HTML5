@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <style>
+        label {
+            text-transform: capitalize;
+            width: 80px;
+            float: left;
+        }
+
+        div {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="theForm">
+        <div>
+            <label for="">user: </label>
+            <input type="text" name="user">
+        </div>
+        <div>
+            <label for="">password: </label>
+            <input type="password" name="pw">
+        </div>
+        <div>
+            <label for="">num: </label>
+            <input type="number" name="num" step="0.001">
+        </div>
+        <div>
+            <input type="submit">
+            <button>也是傳送</button>
+            <input type="image" src="../images/workplace.jpg">
+        </div>
+    </form>
+
+    <script>
+        window.onload = function(){
+            let theForm = document.getElementById('theForm')
+            theForm.onsubmit = function(e){
+                // e.preventDefault()
+                console.log(e.target.nodeName);
+                console.log(e.type);
+            }
+        }
+    </script>
+</body>
+
+</html>

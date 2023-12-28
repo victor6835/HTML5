@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button id="theButton">Click</button>
+
+    <script>
+        function doFirst(){
+            // 跟畫面產生關連
+            let theButton = document.getElementById('theButton')
+
+            // 建立事件聆聽功能
+            theButton.addEventListener('click', () => {
+                let name = document.querySelector('input').value
+                console.log(name);
+            })  
+        }
+        window.onload = doFirst
+    </script>
+</body>
+</html>
